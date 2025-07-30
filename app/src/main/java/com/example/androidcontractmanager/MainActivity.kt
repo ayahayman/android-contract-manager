@@ -1,0 +1,49 @@
+package com.example.androidcontractmanager
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.androidcontractmanager.ui.theme.AndroidContractManagerTheme
+import android.content.Intent
+import android.util.Log
+import android.widget.Button
+
+class MainActivity : ComponentActivity() {
+
+    private val TAG = "MainActivity"
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.d(TAG, "onCreate")
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+
+        val clickMeButton = findViewById<Button>(R.id.button_click_me)
+        clickMeButton.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
+        val shareButton = findViewById<Button>(R.id.button_share)
+        shareButton.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND).apply{
+                type = "text/plain"
+                putExtra(Intent.EXTRA_TEXT, "Welcome to our Application")
+            }
+            startActivity(Intent.createChooser(intent, "Share via"))
+        }
+    }
+    override fun onStart() { super.onStart(); Log.d(TAG, "onStart") }
+    override fun onResume() { super.onResume(); Log.d(TAG, "onResume") }
+    override fun onPause() { super.onPause(); Log.d(TAG, "onPause") }
+    override fun onStop() { super.onStop(); Log.d(TAG, "onStop") }
+    override fun onDestroy() { super.onDestroy(); Log.d(TAG, "onDestroy") }
+}
