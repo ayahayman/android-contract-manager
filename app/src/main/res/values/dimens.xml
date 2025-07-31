@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Layout -->
+    <dimen name="margin_screen_horizontal">24dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_top_medium">24dp</dimen>
+    <dimen name="margin_top_large">32dp</dimen>
+    <dimen name="margin_button_horizontal">70dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_default">10dp</dimen>
+
+    <!-- Height -->
+    <dimen name="header_height">150dp</dimen>
+    <dimen name="input_height">50dp</dimen>
+    <dimen name="notes_height">110dp</dimen>
+
+    <!-- Image -->
+    <dimen name="image_width">60dp</dimen>
+    <dimen name="image_height">120dp</dimen>
+
+    <!-- Text -->
+    <dimen name="text_size_name">36sp</dimen>
+</resources>
+

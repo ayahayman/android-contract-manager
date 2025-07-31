@@ -25,21 +25,6 @@ class MainActivity : ComponentActivity() {
         Log.d(TAG, "onCreate")
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
-        val clickMeButton = findViewById<Button>(R.id.button_click_me)
-        clickMeButton.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)
-        }
-
-        val shareButton = findViewById<Button>(R.id.button_share)
-        shareButton.setOnClickListener {
-            val intent = Intent(Intent.ACTION_SEND).apply{
-                type = "text/plain"
-                putExtra(Intent.EXTRA_TEXT, "Welcome to our Application")
-            }
-            startActivity(Intent.createChooser(intent, "Share via"))
-        }
     }
     override fun onStart() { super.onStart(); Log.d(TAG, "onStart") }
     override fun onResume() { super.onResume(); Log.d(TAG, "onResume") }
