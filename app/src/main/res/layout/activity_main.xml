@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Root LinearLayout container with vertical orientation -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_height="match_parent"
     android:padding="16dp">
 
+    <!-- Title TextView -->
     <TextView
         android:text="Welcome!"
         android:textSize="48sp"
@@ -13,6 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <!-- First Button: "Click Me!" -->
     <Button
         android:id="@+id/button_click_me"
         android:text="Click Me!"
@@ -24,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <!-- Second Button: "Share Message" -->
     <Button
         android:id="@+id/button_share"
         android:text="Share Message"

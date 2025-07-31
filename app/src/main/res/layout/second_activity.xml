@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Root layout: a vertical LinearLayout centered on screen with padding -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_height="match_parent"
     android:padding="16dp">
 
+    <!-- Large header text that says "Surprise!" -->
     <TextView
         android:text="Surprise!"
         android:textSize="60sp"
@@ -13,6 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <!-- Button to return to the main screen -->
     <Button
         android:id="@+id/button_back"
         android:text="Back to Main"
